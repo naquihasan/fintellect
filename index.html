@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fintellect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="fintellect.js"></script>
+
+    <script> 
+        $(function(){
+          $("#navbarSection").load("navbar.html"); 
+        });
+    </script>
+
+</head>
+<body>
+
+
+    <div id="navbarSection"></div>
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 hero-left">
+                    <h1>The best trades require research, then commitment.</h1>
+                    <p class="hero-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ea quis in quibusdam magnam reiciendis facilis, labore ducimus quae neque voluptate autem rem quos incidunt aperiam veritatis quisquam explicabo! Autem?</p>
+                    <div class="btn btn-fintellect-warning main-cta" onclick="openLoginModal()">Get Started</div>
+                </div>
+                <div class="col-md-6">
+                    <img src="/images/banner-removebg-preview.png" alt="banner" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade login-modal" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header">
+           <h1 class="modal-title fs-2 modal-heading-text" id="staticBackdropLabel">Fintellect</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="container-fluid login-form">
+                <div class="row justify-content-center">
+                    <!-- <div class="col-md-12 text-center">
+                        <h1 class="modal-title fs-2 modal-heading-text" id="staticBackdropLabel">Let's get started</h1>
+                    </div> -->
+                    <div class="col-md-4 text-center mb-3">
+                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                            <label class="btn btn-outline-primary" for="btnradio1" data-value="signup" onclick="toggleLoginSignup(this)">Signup</label>
+                          
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="btnradio2" data-value="login" onclick="toggleLoginSignup(this)">Login</label>
+                          
+                          </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center" id="signupDiv">
+                    <div class="col-md-12 text-center">
+                        <h1 class="modal-title fs-2 modal-heading-text" id="staticBackdropLabel">Signup</h1>
+                    </div>
+                    <div class="col-md-4">
+                        <form action="">
+                            <div class="form-group">
+                                <label for="name">Name <span class="text-danger" style="font-size: 12px;">*</span></label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Email <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Create Password <span class="text-danger">*</span></label>
+                                <input type="password" class="form-control">
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-fintellect-warning sigup-button" type="button">Signup</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row justify-content-center" style="display:none;" id="loginDiv">
+                    <div class="col-md-12 text-center">
+                        <h1 class="modal-title fs-2 modal-heading-text" id="staticBackdropLabel">Login</h1>
+                    </div>
+                    <div class="col-md-4">
+                        <form action="">
+                            <div class="form-group">
+                                <label for="name">Name <span class="text-danger" style="font-size: 12px;">*</span></label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Create Password <span class="text-danger">*</span></label>
+                                <input type="password" class="form-control">
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-fintellect-warning sigup-button" type="button">Login</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-md-4 text-center">
+                        <p class="or-text"><span>Or</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid google-signup">
+                <div class="row justify-content-center">
+                    <div class="col-md-4">
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-info sigup-button" type="button">Login With Google</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+   
+</body>
+</html>

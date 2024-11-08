@@ -32,9 +32,20 @@ body{
     font-size: 28px;
 }
 
+.header-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.header-button{
+    width: auto !important;
+}
+
 
 .hero-section{
-    padding: 8rem 0rem;
+    padding: 5rem 0rem;
 }
 
 .hero-left{
@@ -106,7 +117,7 @@ body{
 
 .login-modal form label{
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     color: #a7a7a5;
     font-weight: 500;
 }
@@ -115,6 +126,11 @@ body{
     display: flex;
     flex-direction: column;
     gap: 24px;
+}
+
+.modal-heading{
+    color: white;
+    text-decoration: none;
 }
 
 .form-control {
@@ -142,21 +158,21 @@ body{
 .btn-group .btn{
     border: 0;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 18px;
     color: white;
-    padding: 14px 32px;
+    padding: 7px 32px;
 }
 
 .btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
     background-color: white;
     border: 0px solid #e78a40;
     color: #1d2a43;
-    border-radius: 12px;
+    border-radius: 8px;
 }
 
 .btn-group>.btn-group:not(:last-child)>.btn, .btn-group>.btn.dropdown-toggle-split:first-child, .btn-group>.btn:not(:last-child):not(.dropdown-toggle) {
-    border-top-right-radius: 12px;
-    border-bottom-right-radius: 12px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 .btn-outline-primary:hover{
@@ -194,4 +210,44 @@ body{
     padding: 4px 8px;
     border-radius: 4px;
     font-weight: 500;
+}
+
+
+@media (max-width:768px){
+    .hero-section h1 {
+        color: white;
+        font-weight: 500;
+        line-height: 32px;
+        font-size: 26px;
+    }
+
+    .hero-section {
+        padding: 3rem 0rem;
+    }
+    .hero-left {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        text-align: center;
+    }
+    .hero-text {
+        font-size: 12px;
+        font-weight: 400;
+        color: #c6bdbd;
+    }
+    .btn-fintellect-warning {
+        background-color: #e78a40;
+        border-radius: 12px;
+        width: 100%;
+    }
+
+    .form-box .form-group {
+    width: 100%;
+}
+    
+
+.navbar-toggler{
+    display: none;
+}
+    
 }

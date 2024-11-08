@@ -86,3 +86,23 @@
     margin-top: 48px;
     
 }
+
+
+@media(max-width:768px){
+    .form-box .form-group {
+        width: 100%;
+    }
+    .nav-tabs {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: auto;
+    }
+    .nav-tabs .nav-item {
+        width: auto;
+        border-radius: 8px;
+    }
+    .nav-tabs .nav-item .nav-link{
+        height: 94px;
+        line-height: 22px;
+    }
+}
